@@ -7,6 +7,23 @@
 
 body {
   padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url(/images/linedpaper.png) repeat;
+}
+
+.signature {
+  position: fixed;
+  bottom: 3px;
+  right: 5px;
+  font-size: 24px;
+}
+
+.container {
+  width: 1200px;
+  position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 card {
@@ -14,15 +31,19 @@ card {
   height: 200px;
   display: block;
   float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  transition: all 0.1s ease-in;
+  background-color: white;
+}
+
+card:hover{
+  transform: rotate(2deg);
 }
 
 card img {
   width: 100%;
   height: 100%;
-}
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 }
