@@ -21,29 +21,36 @@ body {
 
 .container {
   width: 1200px;
+  height: 100%;
   position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 card {
-  width: 200px;
-  height: 200px;
+  flex: 0 1 auto;
   display: block;
-  float: left;
   margin-right: 30px;
   margin-bottom: 30px;
-  padding: 20px;
+  padding: 10px 10px 40px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-  transition: all 0.1s ease-in;
+  transition: transform 0.1s ease-out;
   background-color: white;
 }
 
 card:hover{
-  transform: rotate(2deg);
+  transform: rotate(2deg) scale(2);
 }
 
 card img {
-  width: 100%;
-  height: 100%;
+  width: 160px;
+  height: 160px;
 }
